@@ -8,16 +8,95 @@
         Title="Equipos NBA"
         Height="375"
         Width="829.427">
+
+
+    <!--Etilos-->
+    <Window.Resources>
+
+        <!--Etilo Border-->
+        <Style TargetType="Border">
+
+            <Setter Property="CornerRadius"
+                    Value="3" />
+
+            <Setter Property="BorderBrush"
+                    Value="Black" />
+
+            <Setter Property="BorderThickness"
+                    Value="3" />
+
+        </Style>
+
+        <!--Etilo StackPanel contenedorEquipos-->
+
+        <Style TargetType="StackPanel"
+               x:Key="contenedorEquipos">
+
+            <Setter Property="Margin"
+                    Value="10" />
+
+        </Style>
+
+        <!--Etilo StackPanel textoImagenes-->
+        <Style TargetType="StackPanel"
+               x:Key="textoImagenes">
+
+            <Setter Property="Orientation"
+                    Value="Vertical" />
+
+            <Setter Property="HorizontalAlignment"
+                    Value="Stretch" />
+
+        </Style>
+
+        <!--Etilo TextBlock rotulos-->
+        <Style TargetType="TextBlock">
+
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+
+            <Setter Property="FontSize"
+                    Value="30" />
+
+            <Setter Property="TextAlignment"
+                    Value="Center" />
+
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+
+        </Style>
+
+        <!--Etilo Image-->
+        <Style TargetType="Image">
+
+            <Setter Property="Height"
+                    Value="100" />
+
+            <Setter Property="Width"
+                    Value="150" />
+        </Style>
+
+        <!--Etilo WrapPanel-->
+        <Style TargetType="WrapPanel">
+
+            <Setter Property="HorizontalAlignment"
+                    Value="Center" />
+
+        </Style>
+
+
+
+
+
+    </Window.Resources>
+
     <Grid>
         <ScrollViewer>
             <StackPanel>
 
+                <StackPanel Style="{StaticResource contenedorEquipos}">
 
-                <StackPanel Margin="10">
-
-                    <Border CornerRadius="3"
-                            BorderBrush="Black"
-                            BorderThickness="3">
+                    <Border>
 
                         <StackPanel>
 
@@ -34,37 +113,21 @@
                                 </LinearGradientBrush>
                             </StackPanel.Background>
 
-                            <StackPanel Orientation="Vertical"
-                                        HorizontalAlignment="Stretch">
-                                <TextBlock TextWrapping="Wrap"
-                                           Text="Los Ángeles Lakers"
-                                           FontSize="30"
-                                           TextAlignment="Center"
-                                           FontWeight="Bold" />
+                            <StackPanel Style="{StaticResource textoImagenes}">
+                                <TextBlock Text="Los Ángeles Lakers" />
                             </StackPanel>
 
 
-                            <WrapPanel HorizontalAlignment="Center">
-                                <Image Height="100"
-                                       Width="150"
-                                       Source="9_lakers.png" />
+                            <WrapPanel>
+                                <Image Source="9_lakers.png" />
 
-                                <Image Height="100"
-                                       Width="150"
-                                       Source="14_lakers.png" />
+                                <Image Source="14_lakers.png" />
 
+                                <Image Source="23_lakers.png" />
 
-                                <Image Height="100"
-                                       Width="150"
-                                       Source="23_lakers.png" />
+                                <Image Source="3_lakers.png" />
 
-                                <Image Height="100"
-                                       Width="150"
-                                       Source="3_lakers.png" />
-
-                                <Image Height="100"
-                                       Width="150"
-                                       Source="39_lakers.png" />
+                                <Image Source="39_lakers.png" />
                             </WrapPanel>
 
 
@@ -72,11 +135,9 @@
                         </StackPanel>
                     </Border>
                 </StackPanel>
-                <StackPanel Margin="10">
+                <StackPanel Style="{StaticResource contenedorEquipos}">
 
-                    <Border CornerRadius="3"
-                            BorderBrush="Black"
-                            BorderThickness="3">
+                    <Border>
 
                         <StackPanel>
 
@@ -91,52 +152,30 @@
                                 </LinearGradientBrush>
                             </StackPanel.Background>
 
-                            <StackPanel Orientation="Vertical"
-                                        HorizontalAlignment="Stretch">
-                                <TextBlock TextWrapping="Wrap"
-                                           Text="Miami Heat"
-                                           FontSize="30"
-                                           Foreground="White"
-                                           TextAlignment="Center"
-                                           FontWeight="Bold" />
+                            <StackPanel Style="{StaticResource textoImagenes}">
+                                <TextBlock Text="Miami Heat"
+                                           Foreground="White" />
                             </StackPanel>
 
 
-                            <WrapPanel HorizontalAlignment="Center">
-                                <Image Height="100"
-                                       Width="150"
-                                       Source="7_heat.png" />
+                            <WrapPanel>
+                                <Image Source="7_heat.png" />
 
-                                <Image Height="100"
-                                       Width="150"
-                                       Source="14_heat.png" />
+                                <Image Source="14_heat.png" />
 
+                                <Image Source="22_heat.png" />
 
-                                <Image Height="100"
-                                       Width="150"
-                                       Source="22_heat.png" />
+                                <Image Source="99_heat.png" />
 
-                                <Image Height="100"
-                                       Width="150"
-                                       Source="99_heat.png" />
-
-                                <Image Height="100"
-                                       Width="150"
-                                       Source="13_heat.png" />
+                                <Image Source="13_heat.png" />
                             </WrapPanel>
-
-
 
                         </StackPanel>
                     </Border>
                 </StackPanel>
 
-
-
-
-
             </StackPanel>
-            
+
         </ScrollViewer>
     </Grid>
 </Window>
