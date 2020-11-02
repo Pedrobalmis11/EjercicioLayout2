@@ -14,7 +14,8 @@
     <Window.Resources>
 
         <!--Etilo Border-->
-        <Style TargetType="Border">
+        <Style TargetType="Border"
+               x:Key="BordeEquipos">
 
             <Setter Property="CornerRadius"
                     Value="3" />
@@ -84,10 +85,6 @@
 
         </Style>
 
-
-
-
-
     </Window.Resources>
 
     <Grid>
@@ -96,7 +93,7 @@
 
                 <StackPanel Style="{StaticResource contenedorEquipos}">
 
-                    <Border>
+                    <Border Style="{StaticResource BordeEquipos}">
 
                         <StackPanel>
 
@@ -137,7 +134,7 @@
                 </StackPanel>
                 <StackPanel Style="{StaticResource contenedorEquipos}">
 
-                    <Border>
+                    <Border Style="{StaticResource BordeEquipos}">
 
                         <StackPanel>
 
